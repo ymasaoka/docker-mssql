@@ -2,10 +2,10 @@ version: '3'
 
 services:
   mssql:
-    image: mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
-    container_name: 'mssql2019-ctp32-rhel'
+    image: mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+    container_name: 'mssql2019-ctp32-ubuntu'
     environment:
-      - MSSQL_SA_PASSWORD=<your_strong_password>
+      - SA_PASSWORD=<your_strong_password>
       - ACCEPT_EULA=Y
       # - MSSQL_PID=<your_product_id> # default: Developer
       # - MSSQL_PID=Express
