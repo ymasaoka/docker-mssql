@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
+    container_name: 'mssql2019-ctp32-rhel'
+    environment:
+      - MSSQL_SA_PASSWORD=<your_strong_password>
+      - ACCEPT_EULA=Y
+      # - MSSQL_PID=<your_product_id> # default: Developer
+      # - MSSQL_PID=Express
+      # - MSSQL_PID=Standard
+      # - MSSQL_PID=Enterprise
+      # - MSSQL_PID=EnterpriseCore
+    ports:
+      - 1433:1433
+    volumes: # Mounting a volume does not work on Docker for Mac
+      # - ./mssql/log/errorlog:/var/opt/mssql/log/errorlog
+      # - ./mssql/data:/var/opt/mssql/data
