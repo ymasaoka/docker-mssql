@@ -15,5 +15,5 @@ services:
     ports:
       - 1433:1433
     # volumes: # Mounting a volume does not work on Docker for Mac
-    #   - ./mssql/log/var/opt/mssql/logs
+    #   - ./mssql/log:/var/opt/mssql/log
     #   - ./mssql/data:/var/opt/mssql/data
