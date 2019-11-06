@@ -2,8 +2,8 @@ version: '3'
 
 services:
   mssql:
-    image: mcr.microsoft.com/mssql/rhel/server:2019-RC1
-    container_name: 'mssql2019-rc1-rhel'
+    image: mcr.microsoft.com/mssql/rhel/server:2019-latest
+    container_name: 'mssql2019-latest-rhel'
     environment:
       - MSSQL_SA_PASSWORD=<your_strong_password>
       - ACCEPT_EULA=Y
