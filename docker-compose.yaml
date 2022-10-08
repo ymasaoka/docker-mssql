@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mssql:
-    image: mcr.microsoft.com/mssql/rhel/server:2019-latest
+    image: mcr.microsoft.com/mssql/rhel/server:2022-latest
     container_name: 'mssql2019-latest-rhel'
     environment:
       - MSSQL_SA_PASSWORD=<your_strong_password>
@@ -14,6 +14,6 @@ services:
       # - MSSQL_PID=EnterpriseCore
     ports:
       - 1433:1433
-    # volumes: # Mounting a volume does not work on Docker for Mac
-    #   - ./mssql/log:/var/opt/mssql/log
-    #   - ./mssql/data:/var/opt/mssql/data
+    volumes:
+      - ./mssql/log:/var/opt/mssql/log
+      - ./mssql/data:/var/opt/mssql/data
