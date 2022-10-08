@@ -3,7 +3,7 @@ version: '3'
 services:
   mssql:
     image: mcr.microsoft.com/mssql/rhel/server:2022-latest
-    container_name: 'mssql2019-latest-rhel'
+    container_name: 'mssql2022-latest-rhel'
     environment:
       - MSSQL_SA_PASSWORD=<your_strong_password>
       - ACCEPT_EULA=Y
