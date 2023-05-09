@@ -9,7 +9,7 @@ Official Microsoft repository for SQL Server in Docker resources is [here](https
 1. Execute the following command to start the container.  
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
     
     > Mounting a volume does not work on Docker for Mac. In case of macOS environment, please comment out the `volumes` part.
@@ -17,7 +17,7 @@ Official Microsoft repository for SQL Server in Docker resources is [here](https
 1. Run the following command to confirm that the container has started.  
 
     ```bash
-    docker-compose ps
+    docker compose ps
     ```
 
 # Login to SQL Server
