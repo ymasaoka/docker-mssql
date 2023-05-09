@@ -2,8 +2,8 @@ version: '3'
 
 services:
   mssql:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    container_name: 'mssql2019-latest-ubuntu'
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: 'mssql2022-latest-ubuntu'
     environment:
       - SA_PASSWORD=<your_strong_password>
       - ACCEPT_EULA=Y
