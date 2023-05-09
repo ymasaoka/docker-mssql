@@ -2,8 +2,8 @@ version: '3'
 
 services:
   mssql:
-    image: mcr.microsoft.com/mssql/rhel/server:2022-latest
-    container_name: 'mssql2022-latest-rhel'
+    image: mcr.microsoft.com/mssql/rhel/server:2019-latest
+    container_name: 'mssql2019-latest-rhel'
     environment:
       - MSSQL_SA_PASSWORD=<your_strong_password>
       - ACCEPT_EULA=Y
@@ -13,7 +13,7 @@ services:
       # - MSSQL_PID=Enterprise
       # - MSSQL_PID=EnterpriseCore
     ports:
-      - 1433:1433
+      - 11433:1433
     volumes:
       - ./mssql/log:/var/opt/mssql/log
       - ./mssql/data:/var/opt/mssql/data
