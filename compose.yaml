@@ -13,7 +13,7 @@ services:
       # - MSSQL_PID=Enterprise
       # - MSSQL_PID=EnterpriseCore
     ports:
-      - 11433:1433
+      - 1433:1433
     volumes:
       - ./mssql/log:/var/opt/mssql/log
       - ./mssql/data:/var/opt/mssql/data
